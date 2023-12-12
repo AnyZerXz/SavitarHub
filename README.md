@@ -1,35 +1,4 @@
 
-if game.PlaceId == 3237168 then    --- placeid check ---
-    repeat wait() until game:IsLoaded() 
-    repeat wait() until game.Players.LocalPlayer.Character:FindFirstChild("Humanoid") ~= nil
-    
-    
-    --[[
-     function LightSpamer(Targets)
-        local args = {
-            [1] = tonumber(serializeTable(remotes)),
-            [2] = "LightPower2",
-            [3] = "StartCharging",
-            [4] = CFrame.new(1099.5858154296875, 221, -3480.406005859375, 0.9999545812606812, 0.005102770868688822, -0.008057218044996262, -4.656613428188905e-10, 0.8448255062103271, 0.5350419878959656, 0.009537139907479286, -0.5350176692008972, 0.844787061214447),
-            [5] = workspace:WaitForChild("IslandSandCastle"):WaitForChild("RaisedSand"):WaitForChild("RaisedSandBase"):WaitForChild("Real"),
-            [9] = "Left"
-        }
-        game:GetService("Players").LocalPlayer.Character.Powers.Light.RemoteEvent:FireServer(unpack(args))
-        wait(.1)
-        local args = {
-            [1] = tonumber(serializeTable(remotes)),
-            [2] = "LightPower2",
-            [3] = "StopCharging",
-            [4] = CFrame.new(Targets.HumanoidRootPart.Position),
-            [5] = Targets.HumanoidRootPart,
-            [6] = math.huge
-        }
-        game:GetService("Players").LocalPlayer.Character.Powers.Light.RemoteEvent:FireServer(unpack(args))
-    end
-    ]]--
-    
-    
-    
 
     local spawnbox = game:GetService("Workspace").CustomizeModel.SpawnAreaStuffK.HBase
     
@@ -4086,31 +4055,7 @@ Teleport()
 
 
 
-    --[[spawn(function()
-        while true do wait()
-            pcall(function()
-                if getgenv().Steal_Fruit_Yoru then
-                    local OldPosition = game.Players.LocalPlayer.Character.HumanoidRootPart.Position
-                    for i,v in pairs(game:GetService("Players"):GetChildren()) do
-                        if v.Name ~= game.Players.LocalPlayer.Name then 
-                            for x,y in pairs(v.Backpack:GetChildren()) do
-                                if string.find(y.Name , "Plasma") or string.find(y.Name, "Quake") or string.find(y.Name, "Phoenix") or string.find(y.Name, "Dark") or string.find(y.Name, "Vampire") or string.find(y.Name, "Grayity") or string.find(y.Name, "Ope") or string.find(y.Name, "Venom") or string.find(y.Name, "Candy Fruit") or string.find(y.Name, "Hollow")or string.find(y.Name, "Chilly")or string.find(y.Name, "Gas")or string.find(y.Name, "Flare")or string.find(y.Name, "Light Fruit")or string.find(y.Name, "Smoke")or string.find(y.Name, "Rumble")or string.find(y.Name, "Sand")or string.find(y.Name, "Magma")or string.find(y.Name, "Snow") then
-                                    game.Players.LocalPlayer.Character.Humanoid:EquipTool(game:GetService("Players").LocalPlayer.Backpack:FindFirstChild("Yoru"))
-                                    getgenv().FastAttack = true
-                                    game.Workspace.UserData["User_" .. game.Players.LocalPlayer.UserId].UpdateHaki:FireServer()
-                                    repeat wait()
-                                        game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = v.Character.HumanoidRootPart.CFrame * CFrame.new(0,0,2)
-                                        Click()
-                                    until v.Characer.Humanoid.Health == 0 or getgenv().Steal_Fruit_Yoru == false
-                                    game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(OldPosition)
-                                end
-                            end
-                        end
-                    end
-                end
-            end)
-        end
-    end)]]
+    
 
     
 
@@ -4122,4 +4067,3 @@ Teleport()
         end
     end)
 
-end
